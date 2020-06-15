@@ -16,7 +16,7 @@ class _CategoriaWidgetState extends State<CategoriaWidget> {
       Scaffold.of(context).showSnackBar(snackBar);
   }
 
-  Future<String> excluir(int id) {
+  Future<String> excluir(int id) async {
     MyDatabase.instance.produtoDAO.findByCategori(id)
     .whenComplete(() => {
       print("whenComplete")
